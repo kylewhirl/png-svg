@@ -5,7 +5,9 @@ const potrace = require('potrace');
 const { Readable } = require('stream');
 
 const app = express();
-const port = 5070;
+
+// Use the PORT environment variable assigned by the platform, or default to 5070 for local testing
+const port = process.env.PORT || 5070;
 
 // Configure multer to handle image uploads
 const upload = multer({ storage: multer.memoryStorage() });
@@ -60,5 +62,5 @@ app.post('/upload', upload.single('image'), (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at public URL, listening on port: ${port}`);
 });
