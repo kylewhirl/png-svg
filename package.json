@@ -1,0 +1,18 @@
+{
+  "name": "image-to-svg-server",
+  "version": "1.0.0",
+  "description": "A server to convert PNG images to SVG using Sharp and Potrace",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "multer": "^1.4.3",
+    "sharp": "^0.29.3",
+    "potrace": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=14.x"
+  }
+}
